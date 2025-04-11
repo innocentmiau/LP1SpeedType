@@ -33,8 +33,8 @@ classDiagram
         +double TimeTaken
         +GameResult(double wpm, int accuracy, double timeTaken)
     }
-    Program --|> Game
-    Game --|> SentenceProvider
-    Game --|> Evaluator
-    Game --|> GameResult
+    Program --> Game
+    Game --> SentenceProvider
+    Game --> Evaluator
+    Game --> GameResult
 ```
