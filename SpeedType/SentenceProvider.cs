@@ -1,7 +1,5 @@
 using System;
 using System.IO;
-using System.Linq;
-using Humanizer;
 
 namespace SpeedType
 {
@@ -37,8 +35,18 @@ namespace SpeedType
 
             if (File.Exists(filePath))
             {
-                StreamReader sr = File.OpenText(directoryPath);
-                Console.WriteLine(directoryPath);
+                StreamReader sr = File.OpenText(filePath);
+                int countLines = sr.ReadToEnd().Split("\n").Length;
+                sr.Close();
+                sr = File.OpenText(filePath);
+                sentences = new string[countLines];
+                string s;
+                int index = 0;
+                while ((s = sr.ReadLine()) != null)
+                {
+                    sentences[index] = s;
+                    index++;
+                }
                 //sentences = // ////////// => TO IMPLEMENT <= //////////// //
             }
             else
@@ -57,7 +65,8 @@ namespace SpeedType
         /// </returns>
         public string GetRandomSentence()
         {
-            return null;
+            Random rand = new Random();
+            return sentences[rand.Next(0, sentences.Length)];
             // ////////// => TO IMPLEMENT <= //////////// //
         }
     }

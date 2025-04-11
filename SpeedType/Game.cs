@@ -32,6 +32,8 @@ namespace SpeedType
         /// </summary>
         public Game()
         {
+            sentenceProvider = new SentenceProvider();
+            gameStats = new GameResult[5];
             // ////////// => TO IMPLEMENT <= //////////// //
         }
 
@@ -51,7 +53,7 @@ namespace SpeedType
         {
             while (true)
             {
-                AnsiConsole.Clear();
+                //AnsiConsole.Clear();
                 string choice = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
                         .Title("[bold yellow]Speed Type[/]")
@@ -87,7 +89,7 @@ namespace SpeedType
         private void StartGame()
         {
             // The sentence that will be presented to the player.
-            string sentence = new SentenceProvider().GetRandomSentence();
+            string sentence = new SentenceProvider().GetRandomSentence().Humanize();
 
             AnsiConsole.Clear();
             AnsiConsole.MarkupLine("[bold green]Type This Sentence:[/]");
