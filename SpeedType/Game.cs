@@ -159,12 +159,14 @@ namespace SpeedType
             {
                 if (gameStats[i] == null)
                 {
+                    break;
                     // ////////// => TO IMPLEMENT <= //////////// //
                 }
 
                 // Add row to table
                 // Table.AddRow() only accepts strings
                 // ////////// => TO IMPLEMENT <= //////////// //
+                table.AddRow($"{i+1}", $"{gameStats[i].WPM:F2}", $"{gameStats[i].Accuracy}%", $"{gameStats[i].TimeTaken:F2}");
             }
 
             AnsiConsole.Write(table);
