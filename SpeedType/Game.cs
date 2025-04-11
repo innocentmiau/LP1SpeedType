@@ -34,6 +34,7 @@ namespace SpeedType
         {
             sentenceProvider = new SentenceProvider();
             gameStats = new GameResult[5];
+            evaluator = new Evaluator();
             // ////////// => TO IMPLEMENT <= //////////// //
         }
 

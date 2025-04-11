@@ -24,6 +24,7 @@ namespace SpeedType
         /// </remarks>
         public SentenceProvider()
         {
+            random = new Random();
             //random = // ////////// => TO IMPLEMENT <= //////////// //
             
             string directoryPath = Path.GetFullPath(
@@ -65,8 +66,7 @@ namespace SpeedType
         /// </returns>
         public string GetRandomSentence()
         {
-            Random rand = new Random();
-            return sentences[rand.Next(0, sentences.Length)];
+            return sentences[random.Next(0, sentences.Length)];
             // ////////// => TO IMPLEMENT <= //////////// //
         }
     }
