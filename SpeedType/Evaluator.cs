@@ -51,11 +51,11 @@ namespace SpeedType
         public int CalculateAccuracy(string userInput, string originalText)
         {
             int correctChars = 0;
-            int minLength = // ////////// => TO IMPLEMENT <= //////////// //
-
+            int minLength = originalText.Length;
+            
             for (int i = 0; i < minLength; i++)
             {
-                // ////////// => TO IMPLEMENT <= //////////// //
+                if (originalText[i].Equals(userInput[i])) correctChars++;
             }
 
             return (int)((double)correctChars / originalText.Length * 100);

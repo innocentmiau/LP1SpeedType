@@ -110,12 +110,7 @@ namespace SpeedType
             
             // The accuracy percentage calculated based on the user's input and
             // the original sentence.
-            int accurateLetters = 0;
-            for(int i = 0; i<sentence.Length; i++)
-            {
-                if (sentence[i].Equals(userInput[i])) accurateLetters++;
-            }
-            int accuracy = accurateLetters / sentence.Length;
+            int accuracy = evaluator.CalculateAccuracy(userInput, sentence);
 
             // Shift existing entries
             for (int i = gameStats.Length - 1; i > 0; i--)
