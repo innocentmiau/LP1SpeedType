@@ -48,7 +48,6 @@ namespace SpeedType
                     sentences[index] = s;
                     index++;
                 }
-                //sentences = // ////////// => TO IMPLEMENT <= //////////// //
             }
             else
             {
@@ -67,7 +66,6 @@ namespace SpeedType
         public string GetRandomSentence()
         {
             return sentences[random.Next(0, sentences.Length)];
-            // ////////// => TO IMPLEMENT <= //////////// //
         }
     }
 }

@@ -48,7 +48,6 @@ namespace SpeedType
             WPM = wpm;
             Accuracy = accuracy;
             TimeTaken = timeTaken;
-            // ////////// => TO IMPLEMENT <= //////////// //
         }
     }
 }
