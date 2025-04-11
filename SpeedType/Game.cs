@@ -54,7 +54,7 @@ namespace SpeedType
         {
             while (true)
             {
-                //AnsiConsole.Clear();
+                AnsiConsole.Clear();
                 string choice = AnsiConsole.Prompt(
                     new SelectionPrompt<string>()
                         .Title("[bold yellow]Speed Type[/]")

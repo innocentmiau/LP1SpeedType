@@ -55,6 +55,7 @@ namespace SpeedType
             
             for (int i = 0; i < minLength; i++)
             {
+                if (userInput.Length <= i) break;
                 if (originalText[i].Equals(userInput[i])) correctChars++;
             }
 
